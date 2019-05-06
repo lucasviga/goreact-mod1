@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Post from './Post';
-import "../styles.scss"
+import "../styles.scss";
 export default class App extends Component {
   state = {
     posts: [

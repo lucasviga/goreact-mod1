@@ -1,16 +1,10 @@
 import React from 'react';
-import "../styles.scss"
+import '../styles.scss';
+import PostHeader from './PostHeader';
 
 const Post = props => (
   <div className="post" key={props.data.id}>
-    <div className="post-header">
-      <img className="avatar" src={props.data.avatar} alt={props.data.name} />
-      <div className="post-header__content">
-        <h2>{props.data.name}</h2>
-        <span>{props.data.status}</span>
-      </div>
-    </div>
-
+    <PostHeader avatar={props.data.avatar} name={props.data.name} status={props.data.status} />
     <div className="post-body">
       <p>{props.data.msg}</p>
     </div>
