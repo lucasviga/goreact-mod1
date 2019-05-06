@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Header from './Header';
+import Post from './Post';
 
 export default class App extends Component {
   state = {
@@ -35,22 +37,10 @@ export default class App extends Component {
 
     return (
       <div>
-        <div>
-          <h1>Rocketbook</h1>
-        </div>
+        <Header />
 
         {posts.map(post => (
-          <div key={post.id}>
-            <div>
-              <img src={post.avatar} alt={post.name} />
-              <h2>{post.name}</h2>
-              <span>{post.status}</span>
-            </div>
-
-            <div>
-              <p>{post.msg}</p>
-            </div>
-          </div>
+          <Post key={post.id} data={post} />
         ))}
       </div>
     );
